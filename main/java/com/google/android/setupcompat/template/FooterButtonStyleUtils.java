@@ -419,7 +419,7 @@ public class FooterButtonStyleUtils {
 
   private static ColorStateList getButtonDefaultTextCorlor(Button button) {
     if (!defaultTextColor.containsKey(button.getId())) {
-      throw new IllegalStateException("There is no saved default color for button");
+      return button.getTextColors();
     }
     return defaultTextColor.get(button.getId());
   }
